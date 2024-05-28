@@ -7,7 +7,7 @@ public class Shoot : MonoBehaviour
 {
     public GameObject bullet;
     public float pushForce;
-    public float spawnOffset = 1.0f; // Przesuniêcie, o które przesuniêty bêdzie pocisk w stosunku do gracza
+    private float spawnOffset = 0.5f; 
     private Rigidbody2D rbTank;
     public float cooldown;
     private float timer;
@@ -32,7 +32,6 @@ public class Shoot : MonoBehaviour
         {
             timer = 0;
 
-            // Oblicz przesuniêcie dla pozycji pocisku
             Vector3 spawnPosition = transform.position + transform.up * spawnOffset;
 
             GameObject instantiated = Instantiate(bullet, spawnPosition, transform.rotation);

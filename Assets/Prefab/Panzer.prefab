@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 737577071713846324}
   - component: {fileID: 4090487218564512936}
   - component: {fileID: 2105093783566989202}
+  - component: {fileID: -898827413986251682}
   m_Layer: 6
   m_Name: Panzer
   m_TagString: Untagged
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 11818cdd6fd4ec843919903482eee1a5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e6cd2a610d515b7448d8806047941d94, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -188,7 +189,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 2563549928403273912, guid: 466bbeaa1bf3be34f9eeb123a378ab08, type: 3}
   pushForce: 4
-  spawnOffset: 0.5
   cooldown: 0.3
 --- !u!114 &2105093783566989202
 MonoBehaviour:
@@ -229,3 +229,15 @@ MonoBehaviour:
   m_DefaultActionMap: Controller
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &-898827413986251682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953588138121797819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc1b262e7b769e4a96edb89ceef2ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

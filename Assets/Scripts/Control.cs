@@ -9,7 +9,6 @@ public class Control : MonoBehaviour
     private void OnRotate(InputValue value)
     {
         rotateInputValue = value.Get<Vector2>();
-        Debug.Log(rotateInputValue);
     }
 
     private void RotateLogicMethod()
@@ -28,17 +27,15 @@ public class Control : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Sprawdzamy, czy zderzyliœmy siê z obiektem, który jest oznaczony jako przeszkoda
         if (collision.gameObject)
         {
-            Die(); // Jeœli tak, wywo³ujemy funkcjê Die(), która bêdzie odpowiedzialna za œmieræ gracza
+            Die();
         }
     }
 
     private void Die()
     {
-        // Tutaj mo¿esz dodaæ dowoln¹ logikê zwi¹zana z "œmierci¹" gracza, np. dezaktywacjê obiektu gracza, odtworzenie animacji œmierci itp.
-        Debug.Log("Gracz zgin¹³!");
-        gameObject.SetActive(false); // Dezaktywujemy obiekt gracza
+        Debug.Log("Player died!");
+        gameObject.SetActive(false);
     }
 }
