@@ -25,4 +25,20 @@ public class Control : MonoBehaviour
     {
         RotateLogicMethod();
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Sprawdzamy, czy zderzyliœmy siê z obiektem, który jest oznaczony jako przeszkoda
+        if (collision.gameObject)
+        {
+            Die(); // Jeœli tak, wywo³ujemy funkcjê Die(), która bêdzie odpowiedzialna za œmieræ gracza
+        }
+    }
+
+    private void Die()
+    {
+        // Tutaj mo¿esz dodaæ dowoln¹ logikê zwi¹zana z "œmierci¹" gracza, np. dezaktywacjê obiektu gracza, odtworzenie animacji œmierci itp.
+        Debug.Log("Gracz zgin¹³!");
+        gameObject.SetActive(false); // Dezaktywujemy obiekt gracza
+    }
 }

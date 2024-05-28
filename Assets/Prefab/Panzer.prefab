@@ -148,7 +148,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 2
   m_LinearDrag: 0.5
-  m_AngularDrag: 0
+  m_AngularDrag: 0.54
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 6f20f4bdd89475b4c934d1121519dd63, type: 2}
   m_IncludeLayers:
@@ -188,7 +188,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 2563549928403273912, guid: 466bbeaa1bf3be34f9eeb123a378ab08, type: 3}
   pushForce: 4
-  cooldown: 0.5
+  spawnOffset: 0.5
+  cooldown: 0.3
 --- !u!114 &2105093783566989202
 MonoBehaviour:
   m_ObjectHideFlags: 0

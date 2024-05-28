@@ -7,6 +7,7 @@ public class Shoot : MonoBehaviour
 {
     public GameObject bullet;
     public float pushForce;
+    public float spawnOffset = 1.0f; // Przesuniêcie, o które przesuniêty bêdzie pocisk w stosunku do gracza
     private Rigidbody2D rbTank;
     public float cooldown;
     private float timer;
@@ -30,7 +31,11 @@ public class Shoot : MonoBehaviour
         if (timer > cooldown)
         {
             timer = 0;
-            GameObject instantiated = Instantiate(bullet, transform.position, transform.rotation);
+
+            // Oblicz przesuniêcie dla pozycji pocisku
+            Vector3 spawnPosition = transform.position + transform.up * spawnOffset;
+
+            GameObject instantiated = Instantiate(bullet, spawnPosition, transform.rotation);
 
             instantiated.GetComponent<SpriteRenderer>().color = Color.HSVToRGB(1.0f * i / 32, 1.0f, 1.0f);
             i = (i + 1) % 32;
