@@ -4,18 +4,36 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float speed;
+    public float minSpeed = 0.1f;
     public float lifeTime = 5f;
+    private Rigidbody2D rb;
+    private bool isStopped = false;
+    private float stopTimer = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, lifeTime);
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-            transform.Translate(Vector2.up * speed * Time.deltaTime);
+        if (!isStopped)
+        {
+            if (rb.velocity.magnitude < minSpeed)
+            {
+                isStopped = true;
+                stopTimer = lifeTime;
+            }
+        }
+        else
+        {
+            stopTimer -= Time.deltaTime;
+            if (stopTimer <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 }

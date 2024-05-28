@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3891702409731667573
+--- !u!1 &1953588138121797819
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,12 +8,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1302290122661873624}
-  - component: {fileID: 6715928906778686927}
-  - component: {fileID: 2200142575352517133}
-  - component: {fileID: 3514853323766494179}
-  - component: {fileID: 7293261375328002501}
-  - component: {fileID: 5795783490048167781}
+  - component: {fileID: 1328105335739973681}
+  - component: {fileID: 6207855769971255017}
+  - component: {fileID: 4681450384494059253}
+  - component: {fileID: 2519875026961237988}
+  - component: {fileID: 737577071713846324}
+  - component: {fileID: 4090487218564512936}
+  - component: {fileID: 2105093783566989202}
   m_Layer: 6
   m_Name: Panzer
   m_TagString: Untagged
@@ -21,28 +22,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1302290122661873624
+--- !u!4 &1328105335739973681
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3891702409731667573}
+  m_GameObject: {fileID: 1953588138121797819}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -4.92, y: -1.29, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6715928906778686927
+--- !u!212 &6207855769971255017
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3891702409731667573}
+  m_GameObject: {fileID: 1953588138121797819}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -88,13 +89,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2200142575352517133
+--- !u!61 &4681450384494059253
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3891702409731667573}
+  m_GameObject: {fileID: 1953588138121797819}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -133,48 +134,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.35, y: 2.03}
   m_EdgeRadius: 0
---- !u!114 &3514853323766494179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3891702409731667573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62fbd13eb9da49341a26c711160e4aae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7293261375328002501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3891702409731667573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33a05d2bf659b9f4996155008407bc24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 2563549928403273912, guid: 466bbeaa1bf3be34f9eeb123a378ab08, type: 3}
-  pushForce: 3
-  cooldown: 0.5
---- !u!50 &5795783490048167781
+--- !u!50 &2519875026961237988
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3891702409731667573}
+  m_GameObject: {fileID: 1953588138121797819}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 2
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 0.5
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 6f20f4bdd89475b4c934d1121519dd63, type: 2}
   m_IncludeLayers:
@@ -185,5 +159,72 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &737577071713846324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953588138121797819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d30c475f98588ae4cbd7fb8dd020119d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb2D: {fileID: 2519875026961237988}
+--- !u!114 &4090487218564512936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953588138121797819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33a05d2bf659b9f4996155008407bc24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 2563549928403273912, guid: 466bbeaa1bf3be34f9eeb123a378ab08, type: 3}
+  pushForce: 4
+  cooldown: 0.5
+--- !u!114 &2105093783566989202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953588138121797819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: f3f5cef17e3e0734eb768a07dc88df45, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 924ebd91-d649-4e82-ae37-3f0fcffec0f0
+    m_ActionName: Controller/Camera[/XInputControllerWindows/leftStick,/Sony Interactive
+      Entertainment Wired Gamepad/stick]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 889a8142-aad5-4a0d-8fc4-b91bc64fdb76
+    m_ActionName: Controller/Fire[/XInputControllerWindows/buttonSouth]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Controller
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
