@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Shoot : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Shoot : MonoBehaviour
     public float cooldown;
     private float timer;
     private float i = 1;
+    private Vector2 shootDirection;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +24,12 @@ public class Shoot : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if (Input.GetMouseButton(0) && timer > cooldown)
+    }
+
+    // Method to be called by PlayerInput component for shooting
+    public void OnFire()
+    {
+        if (timer > cooldown)
         {
             timer = 0;
             // Instantiate bullet
@@ -31,19 +38,12 @@ public class Shoot : MonoBehaviour
             instantiated.GetComponent<SpriteRenderer>().color = Color.HSVToRGB(1.0f * i / 32, 1.0f, 1.0f);
             i = (i + 1) % 32;
 
+            // Set the bullet to move in the direction the player is facing
+            Rigidbody2D bulletRb = instantiated.GetComponent<Rigidbody2D>();
+            bulletRb.AddForce(transform.up * pushForce);
 
-            // Get the mouse position in the world
-            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mousePosition.z = 0; // Z is irrelevant in 2D
-
-            // Calculate direction from mouse to the object
-            Vector3 direction = transform.position - mousePosition;
-
-            // Normalize the direction to get a unit vector
-            direction.Normalize();
-
-            // Apply force in the opposite direction
-            rb.AddForce(direction * pushForce, ForceMode2D.Impulse);
+            // Apply force in the opposite direction to the player
+            rb.AddForce(-transform.up * pushForce, ForceMode2D.Impulse);
         }
     }
 }

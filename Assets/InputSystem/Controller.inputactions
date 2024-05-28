@@ -1,0 +1,54 @@
+{
+    "name": "Controller",
+    "maps": [
+        {
+            "name": "Controller",
+            "id": "b3b5faa0-1bed-48f2-a97e-129c5e00408a",
+            "actions": [
+                {
+                    "name": "Rotate",
+                    "type": "Value",
+                    "id": "924ebd91-d649-4e82-ae37-3f0fcffec0f0",
+                    "expectedControlType": "Stick",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Fire",
+                    "type": "Button",
+                    "id": "889a8142-aad5-4a0d-8fc4-b91bc64fdb76",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Tap",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c08a10b8-8fc9-4c90-8f48-ad510383d62b",
+                    "path": "<Joystick>/stick",
+                    "interactions": "",
+                    "processors": "StickDeadzone",
+                    "groups": "",
+                    "action": "Rotate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d800a0ee-0d36-4a8c-a4c5-86055e9910a8",
+                    "path": "<HID::Sony Interactive Entertainment Wired Gamepad>/button2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
